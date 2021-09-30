@@ -11,18 +11,21 @@ import { useEffect, useState } from "react";
 
 export default function Board(props) {
   useEffect(() => {
-    let temp = [];
+    let left = [];
+    let right = [];
     for (let i = 0; i < 20; i++) {
-      temp.push(false);
+      left.push(false);
+      right.push(false);
     }
-    props.setLeftPattern(temp);
-    props.setRightPattern(temp);
+
+    props.setLeftPattern(left);
+    props.setRightPattern(right);
   }, []);
 
   return (
     <Box w='100%'>
-      <VStack align='normal'>
-        <HStack spacing={5} overflowX='scroll'>
+      <VStack align='normal' spacing={2} overflowX='scroll'>
+        <HStack spacing={5}>
           <Center px={16} h={20} borderRadius={6} backgroundColor='gray.700'>
             <Text color='white' fontSize='2xl' fontWeight={600}>
               L
@@ -67,7 +70,7 @@ export default function Board(props) {
           </HStack>
         </HStack>
 
-        <HStack spacing={5} overflowX='scroll'>
+        <HStack spacing={5}>
           <Center px={16} h={20} borderRadius={6} backgroundColor='gray.700'>
             <Text color='white' fontSize='2xl' fontWeight={600}>
               R

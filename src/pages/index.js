@@ -7,11 +7,15 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import Board from "../components/board";
+import Controls from "../components/controls";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [leftPattern, setLeftPattern] = useState([]);
   const [rightPattern, setRightPattern] = useState([]);
+
+  const [playing, setPlaying] = useState(false);
+  const [cursor, setCursor] = useState(0);
 
   return (
     <Box h='100vh' w='100%' backgroundColor='gray.900'>
@@ -26,6 +30,8 @@ export default function Home() {
                 v0.1
               </Text>
             </HStack>
+
+            <Controls playing={playing} setPlaying={setPlaying} />
 
             <Board
               leftPattern={leftPattern}
