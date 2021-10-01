@@ -51,9 +51,9 @@ export default function Controls(props) {
         <HStack spacing={4}>
           <Slider
             min={30}
-            max={460}
+            max={480}
             aria-label='slider-ex-1'
-            defaultValue={180}
+            defaultValue={300}
             w={48}
             onChange={(val) => props.setBPM(val)}
           >
