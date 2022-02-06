@@ -1,34 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is project makes it easier to create complex beat patterns for our drumbot. 
+Website is hosted [here](https://drumbotbeatmaker.netlify.app/)
 
-## Getting Started
+## Usage
+Upon opening the website, set the tempo (resolution) of the beat. Higher tempo means more space, thus allowing more diverse beats.
+Click on a cell to add a drumbeat. Cells placed on the upper row means the robot will hit the left drumstick, while the cells on the lower row are each right hits.
 
-First, run the development server:
+Construct your beat and then click the "Play" button to listen to your beat. Clicking on a placed cell removes it. 
+After you make sure the beat is perfect, click the export button and use the exported beat code in your robot project.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+    CommandScheduler.getInstance().schedule(new SequentialCommandGroup( -> Exported Code Here <- ));
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
